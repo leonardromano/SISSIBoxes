@@ -7,6 +7,6 @@ but it should be kept in mind, if one tries to run it on a different system. Tha
 Currently only Leonard Romano, Andreas Burkert, Manuel Behrendt and Mingyu Hu have access to these files on OP3PGN (and system admins).  
 
 **Parallelization Note**: The core functions allow for threaded use.   
-Execution can be heavily accelerated by using multiple threads, i.e. by calling the script with multiple threads, i.e.
+Execution can be heavily accelerated by using multiple threads, i.e. by calling the script with multiple threads, i.e.   
 	julia -t nthreads get_SISSI_boxes.jl   
-where __nthreads__ is the number of parallel threads. 
+where _nthreads_ is the number of parallel threads. 
