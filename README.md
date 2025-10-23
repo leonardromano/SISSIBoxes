@@ -8,5 +8,4 @@ Currently only Leonard Romano, Andreas Burkert, Manuel Behrendt and Mingyu Hu ha
 
 **Parallelization Note**: The core functions allow for threaded use.   
 Execution can be heavily accelerated by using multiple threads, i.e. by calling the script with multiple threads, i.e.   
-	julia -t nthreads get_SISSI_boxes.jl   
-where _nthreads_ is the number of parallel threads. 
+```julia -t nthreads get_SISSI_boxes.jl```, where _nthreads_ is the number of parallel threads. 
