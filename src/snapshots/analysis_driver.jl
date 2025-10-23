@@ -6,7 +6,8 @@ function get_data_box(ioutput::Integer; model_name::String="N1", path_output::St
         
         # status message
         println("Setting resolution level to $lmax (max: 18), corresponding to $(round(48000 / 2^lmax, digits=2)) pc.")
-        println("The box will be resolved by approx. $((extent[2] - extent[1]) * 2^lmax / 48.0) x $((extent[4] - extent[3]) * 2^lmax / 48.0) x $((extent[6] - extent[5]) * 2^lmax / 48.0) cells.")
+        println("The box will be resolved by approx. $(round(Int, extent[2] - extent[1]) * 2^lmax / 48.0)) x 
+                 $(round(Int, (extent[4] - extent[3]) * 2^lmax / 48.0)) x $(round(Int, (extent[6] - extent[5]) * 2^lmax / 48.0)) cells.")
 
         # read in gas
         println("Loading data...")
