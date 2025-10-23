@@ -34,7 +34,8 @@ function get_time(;model_name::String="N1")
         path_snapshot = get_path_snapshot(model_name)
         ioutputs = get_snapshots(model_name=model_name)
         t0 = infodata(329, path=path_snapshot, verbose=false).time
-        return [infodata(ioutput, path=path_snapshot, verbose=false).time - t0 for ioutput in ioutputs]
+        t2Myr = infodata(329, path=path_snapshot, verbose=false).scale.Myr
+        return [infodata(ioutput, path=path_snapshot, verbose=false).time - t0 for ioutput in ioutputs] * t2Myr
     else
         path_data = get_path_bubbles(model_name) * "Bubble_001/"
         ioutputs = get_snapshots(model_name=model_name)
